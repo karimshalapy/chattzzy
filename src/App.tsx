@@ -3,6 +3,7 @@ import classes from './App.module.scss';
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth, GoogleAuthProvider } from './Firebase';
 import ChatRoom from './components/ChatRoom/ChatRoom';
+import MessageForm from './components/MessageForm/MessageForm';
 import Button from './components/Button/Button';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
               : <Button variant="white" onClick={signInWithGoogle}>Sign in with Google</Button>
           }
         </section>
+        <MessageForm />
       </main>
     </div>
   );
