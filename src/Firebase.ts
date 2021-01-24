@@ -1,4 +1,4 @@
-import firebase from 'firebase'
+import firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'
 
@@ -15,3 +15,5 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig)
 export const auth = app.auth()
 export const firestore = app.firestore()
+export const { GoogleAuthProvider } = firebase.auth
+export const { serverTimestamp } = firebase.firestore.FieldValue
