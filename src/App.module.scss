@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  max-width: 72.8rem;
+  margin: 0 auto;
+  position: relative;
+
+  & header {
+    background-color: #181717;
+    height: 10vh;
+    min-height: 5rem;
+    color: white;
+    position: fixed;
+    width: 100%;
+    max-width: 72.8rem;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
