@@ -2,8 +2,11 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; //1rem == 10pxs
-  @include respond(1100) {
+  font-size: 75%; //1rem == 12pxs
+  @include respond(1400) {
+    font-size: 62.5%; //1rem == 10pxs
+  }
+  @include respond(500) {
       font-size: 50%; //1rem == 8pxs
   }
 }
@@ -22,7 +25,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
+  background-color: #282c34;
 }
 
 code {
