@@ -17,7 +17,11 @@ function App() {
     <div className={classes.App}>
       <header>
         <h1>⚛️🔥💬</h1>
-        <Button variant="secondary" onClick={() => { auth.signOut() }}>Sign Out</Button>
+        {
+          user
+            ? <Button variant="secondary" onClick={() => { auth.signOut() }}>Sign Out</Button>
+            : null
+        }
       </header>
       <main className={classes.MainContainer}>
         <section className={classes.ChatContainer}>
