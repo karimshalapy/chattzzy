@@ -1,23 +1,32 @@
 import React from 'react';
 import classes from './App.module.scss';
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { auth } from './Firebase';
+import { auth, GoogleAuthProvider } from './Firebase';
+import ChatRoom from './components/ChatRoom/ChatRoom';
 import Button from './components/Button/Button';
 
 function App() {
   const [user] = useAuthState(auth)
+  const signInWithGoogle = () => {
+    const provider = new GoogleAuthProvider()
+    auth.signInWithPopup(provider)
+  }
+
   return (
     <div className={classes.App}>
       <header>
         <h1>⚛️🔥💬</h1>
-        <div>
+        <Button variant="secondary" onClick={() => { auth.signOut() }}>Sign Out</Button>
+      </header>
+      <main className={classes.MainContainer}>
+        <section className={classes.ChatContainer}>
           {
             user
-              ? <Button variant="secondary" onClick={() => { auth.signOut() }}>Sign Out</Button>
-              : null
+              ? <ChatRoom />
+              : <Button variant="white" onClick={signInWithGoogle}>Sign in with Google</Button>
           }
-        </div>
-      </header>
+        </section>
+      </main>
     </div>
   );
 }

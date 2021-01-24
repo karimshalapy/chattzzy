@@ -21,3 +21,28 @@
     box-sizing: border-box;
   }
 }
+
+.MainContainer {
+  margin: 10vh 0;
+  padding: 1rem;
+  height: 80vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+}
+
+.ChatContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(80vh - 2rem);
+  background-color: rgb(40, 37, 53);
+  position: relative;
+}
