@@ -1,0 +1,9 @@
+@mixin respond($width, $maxOrMin: max) {
+    @if($width and $maxOrMin == max) {
+        @media only screen and (max-width: #{$width / 16}em) { @content; }
+    } @else if($width and $maxOrMin == min){
+        @media only screen and (min-width: #{$width / 16}em) { @content; }
+    } @else {
+        @error "Unknown boundaries"
+    }
+}
