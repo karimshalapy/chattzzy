@@ -12,7 +12,10 @@ const ChatMessage = React.forwardRef<HTMLDivElement, Props>(({ message }, ref) =
     return (
         <div className={`${classes.Message} ${isSent ? classes.Sent : ""}`} ref={ref}>
             <img src={message.photoURL} alt="user profile" />
-            <Paragraph isSent={isSent}>{message.text}</Paragraph>
+            <div>
+                <span className={classes.SenderName}>{message.senderName}</span>
+                <Paragraph isSent={isSent}>{message.text}</Paragraph>
+            </div>
         </div>
     )
 })
