@@ -2,5 +2,6 @@ interface Message {
     text: string,
     uid: string,
     id: string,
-    photoURL: string
+    photoURL: string,
+    senderName: string
 }

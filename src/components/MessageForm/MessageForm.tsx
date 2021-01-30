@@ -18,6 +18,7 @@ const MessageForm: React.FC<Props> = props => {
         const { uid, photoURL } = auth.currentUser!
         await messageRef.add({
             text: message,
+            senderName: user?.displayName,
             createdAt: serverTimestamp(),
             uid,
             photoURL
