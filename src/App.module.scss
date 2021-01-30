@@ -21,7 +21,13 @@
     box-sizing: border-box;
   }
 }
-
+.MainHeading {
+  margin-left: 1rem;
+  font: 2.2rem/1 EndlessBossBattle, Courier;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  user-select: none;
+}
 .MainContainer {
   margin: 10vh 0;
   padding: 1rem;

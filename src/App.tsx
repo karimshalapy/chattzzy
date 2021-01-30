@@ -16,7 +16,7 @@ function App() {
   return (
     <div className={classes.App}>
       <header>
-        <h1>⚛️🔥💬</h1>
+        <h1 className={classes.MainHeading}>Chattzzy</h1>
         {
           user
             ? <Button variant="secondary" onClick={() => { auth.signOut() }}>Sign Out</Button>
