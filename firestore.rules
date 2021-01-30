@@ -12,7 +12,7 @@ service cloud.firestore {
       let isSignedIn = request.auth.uid != null;
       let isOwner = request.auth.uid == request.resource.data.uid;
       let isNotBanned = exists(
-        /database/$(database)/documents/banned/$(request.auth.uid)
+        /databases/$(database)/documents/banned/$(request.auth.uid)
       ) == false;
       return isSignedIn && isOwner && isNotBanned
     }
