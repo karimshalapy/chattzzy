@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '../../Firebase'
 import Button from '../Button/Button'
+import { ReactComponent as Chat } from '../../assets/images/chat.svg'
 import classes from './Header.module.scss'
 
 interface Props {
@@ -19,7 +20,7 @@ const Header: React.FC<Props> = props => {
 
     return (
         <header className={classes.Header}>
-            <h1 className={classes.MainHeading}>Chattzzy</h1>
+            <h1 className={classes.MainHeading}>Chattzzy <span role="img" aria-label="chat bubble"><Chat /></span></h1>
             {
                 user
                     ?

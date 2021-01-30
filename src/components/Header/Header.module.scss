@@ -20,6 +20,15 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     user-select: none;
+    span {
+        vertical-align: middle;
+    }
+    svg {
+        height: 2.5rem;
+        width: 2.5rem;
+        stroke: currentColor;
+        stroke-width: 1rem;
+    }
 }
 .headerBtnsBox {
     display: grid;
