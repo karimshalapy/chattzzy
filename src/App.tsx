@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './App.module.scss';
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth, GoogleAuthProvider } from './Firebase';
@@ -8,9 +8,14 @@ import Button from './components/Button/Button';
 
 function App() {
   const [user] = useAuthState(auth)
+  const [isDarkMode, setIsDarkMode] = useState(false)
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider()
     auth.signInWithPopup(provider)
+  }
+  const toggleDarkMode = () => {
+    setIsDarkMode(prev => !prev)
+    document.body.classList.toggle("dark")
   }
 
   return (
@@ -19,10 +24,18 @@ function App() {
         <h1 className={classes.MainHeading}>Chattzzy</h1>
         {
           user
-            ? <Button variant="secondary" onClick={() => { auth.signOut() }}>Sign Out</Button>
+            ?
+            <div className={classes.headerBtnsBox}>
+              <Button variant="secondary" onClick={toggleDarkMode}>
+                <span role="img" aria-label={isDarkMode ? "Sun" : "Moon"}>
+                  {isDarkMode ? "☀️" : "🌙"}
+                </span>
+              </Button>
+              <Button variant="secondary" onClick={() => { auth.signOut() }}>Sign Out</Button>
+            </div>
             : null
         }
-      </header>
+      </header >
       <main className={classes.MainContainer}>
         <section className={classes.ChatContainer}>
           {
@@ -33,7 +46,7 @@ function App() {
         </section>
         <MessageForm />
       </main>
-    </div>
+    </div >
   );
 }
 

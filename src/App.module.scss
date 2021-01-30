@@ -4,7 +4,7 @@
   margin: 0 auto;
   position: relative;
 
-  & header {
+  header {
     background-color: var(--header-background);
     height: 10vh;
     min-height: 5rem;
@@ -19,6 +19,11 @@
     z-index: 99;
     padding: 1rem;
     box-sizing: border-box;
+  }
+  .headerBtnsBox {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: .5rem;
   }
 }
 .MainHeading {
