@@ -3,35 +3,6 @@
   max-width: 72.8rem;
   margin: 0 auto;
   position: relative;
-
-  header {
-    background-color: var(--header-background);
-    height: 10vh;
-    min-height: 5rem;
-    color: var(--color-text-primary);
-    position: fixed;
-    width: 100%;
-    max-width: 72.8rem;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 99;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-  .headerBtnsBox {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: .5rem;
-  }
-}
-.MainHeading {
-  margin-left: 1rem;
-  font: 2.2rem/1 EndlessBossBattle, Courier;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  user-select: none;
 }
 .MainContainer {
   margin: 10vh 0;
@@ -48,7 +19,6 @@
     background: var(--color-primary-light);
   }
 }
-
 .ChatContainer {
   display: flex;
   flex-direction: column;

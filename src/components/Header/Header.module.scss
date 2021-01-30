@@ -1,0 +1,28 @@
+.Header {
+    background-color: var(--header-background);
+    height: 10vh;
+    min-height: 5rem;
+    color: var(--color-text-primary);
+    position: fixed;
+    width: 100%;
+    max-width: 72.8rem;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.MainHeading {
+    margin-left: 1rem;
+    font: 2.2rem/1 EndlessBossBattle, Courier;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    user-select: none;
+}
+.headerBtnsBox {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5rem;
+}
