@@ -5,16 +5,16 @@
     border-radius: 2.5rem;
     overflow-wrap: anywhere;
     position: relative;
-    color: white;
+    color: var(--color-text-primary);
     text-align: left;
 }
 .Sent {
-    color: white;
-    background: #0b93f6;
+    color: var(--color-text-primary);
+    background: var(--color-secondary);
     align-self: flex-end;
 }
 .Received {
-    background: #e5e5ea;
-    color: black;
+    background: var(--color-tertiary);
+    color: var(--color-text-primary-dark);
 }
   

@@ -5,10 +5,10 @@
   position: relative;
 
   & header {
-    background-color: #181717;
+    background-color: var(--header-background);
     height: 10vh;
     min-height: 5rem;
-    color: white;
+    color: var(--color-text-primary);
     position: fixed;
     width: 100%;
     max-width: 72.8rem;
@@ -37,10 +37,10 @@
     width: 0.5rem;
   }
   &::-webkit-scrollbar-track {
-    background: #1e1e24;
+    background: var(--color-grey-darkest);
   }
   &::-webkit-scrollbar-thumb {
-    background: #6649b8;
+    background: var(--color-primary-light);
   }
 }
 
@@ -49,6 +49,6 @@
   flex-direction: column;
   justify-content: center;
   min-height: calc(80vh - 2rem);
-  background-color: rgb(40, 37, 53);
+  background-color: var(--color-primary-dark);
   position: relative;
 }

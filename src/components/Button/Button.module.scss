@@ -1,7 +1,7 @@
 .Button {
-    background-color: #282c34;
+    background-color: var(--color-grey);
     border: none;
-    color: white;
+    color: var(--color-text-primary);
     padding: .75em 1.6em;
     text-align: center;
     text-decoration: none;
@@ -10,13 +10,13 @@
     font-size: 1.5rem;
 
     &White {
-        color: #282c34;
-        background: white;
+        color: var(--color-text-secondary);
+        background: var(--color-tertiary);
         max-width: 40rem;
         margin: 0 auto;
     }
     &Primary {
-        background-color: rgb(56, 56, 143);
+        background-color: var(--color-primary);
     }
 }
   
